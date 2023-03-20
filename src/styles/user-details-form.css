@@ -1,0 +1,47 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+background: rgb(103,103,103);
+background: linear-gradient(90deg, rgba(103,103,103,1) 0%, rgba(186,237,8,1) 100%);
+width: 700px;
+display: flex;
+flex-direction: column;
+}
+
+.outerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 700px;
+}
+
+.innerContainer{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 500px;
+    box-shadow: 5px 5px;
+}
+
+.input{
+    width: 250px;
+    border: 2px solid;
+    flex-direction: column;
+    justify-content: right;
+    right: 0px;
+}
+
+.field{
+    text-align: right;
+    width: 120px;
+    padding-right: 5px;
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}

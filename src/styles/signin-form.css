@@ -1,0 +1,192 @@
+.ba {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.b--black {
+    border-color: #000;
+}
+
+.b--transparent {
+    border-color: transparent;
+}
+
+.db {
+    display: block;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.b {
+    font-weight: bold;
+}
+
+.fw6 {
+    font-weight: 600;
+}
+
+.input-reset {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+}
+
+.input-reset::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.lh-copy {
+    line-height: 1.5;
+}
+
+.link {
+    text-decoration: none;
+    transition: color .15s ease-in;
+}
+
+.link:link, .link:visited {
+    transition: color .15s ease-in;
+}
+
+.link:hover {
+    transition: color .15s ease-in;
+}
+
+.link:active {
+    transition: color .15s ease-in;
+}
+
+.link:focus {
+    transition: color .15s ease-in;
+    outline: 1px dotted currentColor;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.black-80 {
+    color: rgba(0, 0, 0, .8);
+}
+
+.black {
+    color: #000;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.hover-white:hover {
+    color: #fff;
+}
+
+.hover-white:focus {
+    color: #fff;
+}
+
+.hover-bg-black:hover {
+    background-color: #000;
+}
+
+.hover-bg-black:focus {
+    background-color: #000;
+}
+
+.pa0 {
+    padding: 0;
+}
+
+.pa2 {
+    padding: .5rem;
+}
+
+.pa4 {
+    padding: 2rem;
+}
+
+.pv2 {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.ph0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.ph3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.ma0 {
+    margin: 0;
+}
+
+.mt3 {
+    margin-top: 1rem;
+}
+
+.mv3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mh0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.f4 {
+    font-size: 1.25rem;
+}
+
+.f6 {
+    font-size: .875rem;
+}
+
+.measure {
+    max-width: 30em;
+}
+
+.center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.dim {
+    opacity: 1;
+    transition: opacity .15s ease-in;
+}
+
+.dim:hover, .dim:focus {
+    opacity: .5;
+    transition: opacity .15s ease-in;
+}
+
+.dim:active {
+    opacity: .8;
+    transition: opacity .15s ease-out;
+}
+
+.grow {
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform .25s ease-out;
+}
+
+.grow:hover, .grow:focus {
+    transform: scale(1.05);
+}
+
+.grow:active {
+    transform: scale(.9);
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
