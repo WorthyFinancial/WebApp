@@ -38,11 +38,11 @@ export default function Layout() {
                     <div className="basis-4/5 w-4/5 h-1/5 bg-green-200 shadow-lg rounded">
                         <SignInNav className="float-right"/>
                         <div>
-                            <div class="flex items-center">
+                            <div class="flex items-center m-5">
                             <Avatar size='xl' name='Christian Nwamba' src='https://bit.ly/code-beast' />
-                                <div>
-                                    <strong>Andrew Alfred</strong>
-                                    <span>Technical advisor</span>
+                                <div className='flex flex-col'>
+                                    <strong className='pl-2 text-2xl'>Andrew Alfred</strong>
+                                    <span className='p-2 text-xl'>Technical advisor</span>
                                 </div>
                             </div>
                         </div>
