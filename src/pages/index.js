@@ -1,8 +1,12 @@
+import Layout from "@/components/layout"
+import Dashboard from "./dashboard"
+
 export default function Home() {
   return (
-  <h1 className="text-3xl font-bold underline">
-      Home Page b
-    </h1>
+    <main>
+      <Layout />
+      <Dashboard />
+    </main>
   )
 }
 
