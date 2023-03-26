@@ -1,8 +1,8 @@
-import Image from 'next/image';
+import Image from '../lib/WorthyAppLogo.png';
 
 const Logo = ({size}) => {
 return (
-        <Image alt='logo' src="/WorthyAppLogo.png" height={size} width={size}/>
+        <Image alt='logo' src="Image" height={size} width={size}/>
 )
 }
 

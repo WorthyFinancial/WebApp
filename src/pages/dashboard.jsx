@@ -1,58 +1,57 @@
-import Link from "next/link";
-import { useState } from "react";
+import {
+  Flex,
+  Spacer,
+  Box,
+  Divider,
+  Avatar,
+  AvatarBadge,
+  AvatarGroup,
+} from "@chakra-ui/react";
+import MainNavigation from "@/components/Navigation/MainNavigation";
+import SignInNav from "@/components/Navigation/SignInNav";
+import Logo from "@/components/Logo";
 
 export default function Dashboard() {
-  const [active, setActive] = useState("Home");
-
-  const handleClick = (active) => {
-    setActive(active);
-  };
-
-  console.log(active);
-
   return (
     <div>
-      <div className='flex flex-row justify-between '>
-        <div>
-          <Link href={""} className={"text-gray-300"}>
-            Home
-          </Link>
-          <Link href={""} className='ml-16'>
-            Goals
-          </Link>
+      <div className='flex flex-nowrap shadow-lg rounded bg-red-100 p-5 absolute basis-4/5 w-4/5 h-4/5 bottom-0 right-0'>
+        <div className='w-1/3 h-52 shadow-lg rounded bg-slate-100 m-5 text-center'>
+          <h2 className='text-2xl m-4'>Variable Expenses</h2>
+          <div className='m-5'>
+            <p>Available Balance</p>
+            <h1 className='text-3xl font-bold'>$3,846.51</h1>
+          </div>
+          <p>Next Deposit: 9 days</p>
         </div>
-        <div>
-          <Link href={""}>Profile</Link>
-          <Link href={""} className='ml-16'>
-            Signout
-          </Link>
+        <div className='w-1/3 h-52 shadow-lg rounded bg-slate-100 m-5 text-center'>
+          <h2 className='text-2xl m-4'>Fun Money</h2>
+          <div className='m-5'>
+            <p>Available Balance</p>
+            <h1 className='text-3xl font-bold'>$1,341.17</h1>
+          </div>
+          <p>Next Deposit: 9 days</p>
+        </div>
+        <div className='w-1/3 h-52 shadow-lg rounded bg-slate-100 m-5 text-center'>
+          <div className='flex no-flex-wrap center h-1/6'>
+            <p className='font-bold'>Bills: </p> <p>Good Standing</p>
+          </div>
+          <div className='flex no-flex-wrap center h-1/6'>
+            <p className='font-bold'>Debt: </p> <p>Good Standing</p>
+          </div>
+          <div className='flex no-flex-wrap center h-1/6'>
+            <p className='font-bold'>Subscriptions: </p> <p>Good Standing</p>
+          </div>
+          <div className='flex no-flex-wrap center h-1/6'>
+            <p className='font-bold'>Sinking Funds: </p> <p>Good Standing</p>
+          </div>
+          <div className='flex no-flex-wrap center h-1/6'>
+            <p className='font-bold'>Emergency Fund: </p> <p>3 Months</p>
+          </div>{" "}
+          <div className='flex no-flex-wrap center h-1/6'>
+            <p className='font-bold'>Short Term Savings: </p> <p>55% to goal</p>
+          </div>
         </div>
       </div>
-      <h1 className='text-center text-5xl mt-16'>Debt Pay-off</h1>
-      <button className='bg-green-500 hover:bg-green-500 text-white font-bold py-2 px-4 mt-7 rounded absolute left-2/3'>
-        Button
-      </button>
-
-      <table class='table-auto mx-auto mt-24 border-separate'>
-        <thead className='m-16'>
-          <tr>
-            <th className='border-b-2'>Debt</th>
-            <th className='px-16 py-2 border-b-2'>Balance</th>
-            <th className='px-16 py-2 border-b-2'>Payment</th>
-            <th className='px-16 py-2 border-b-2'>months</th>
-            <th className='border-b-2'>Est.finish</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className=' px-8 py-4 border-b-2'>storm</td>
-            <td className='border-b-2'>$239</td>
-            <td className='text-green-500 border-b-2'>$525.00</td>
-            <td className='border-b-2'>1</td>
-            <td className='border-b-2'>4/1/2023</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   );
 }
