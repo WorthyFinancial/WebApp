@@ -1,4 +1,5 @@
-import Image from '../lib/WorthyAppLogo.png';
+import React from 'react';
+import Image from '../Assets/WorthyAppLogo.png';
 
 const Logo = ({size}) => {
 return (

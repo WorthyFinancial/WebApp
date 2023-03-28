@@ -1,6 +1,5 @@
-import DebtPlan from "@/components/debtPlan"
 import Layout from "@/components/layout"
-import Dashboard from "./dashboard"
+import Dashboard from "../components/dashboard"
 import debts from '../lib/debts';
 
 const Home = () => {
@@ -9,7 +8,6 @@ const Home = () => {
     <main>
       <Layout />
       <Dashboard />
-      <DebtPlan debts={[]}/>
     </main>
   )
 }
