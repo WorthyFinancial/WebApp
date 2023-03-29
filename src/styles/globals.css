@@ -20,3 +20,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.modal{
+  display:none;
+}
+
+.overflow{
+  overflow: scroll;
+}
+
+.expense-ctn{
+  display: flex;
+  height: 100vh;
+}
+

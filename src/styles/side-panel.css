@@ -1,0 +1,27 @@
+.side-panel{
+    height: 100vh;
+    position:fixed;
+    top:0;
+    right: 0;
+    display: flex;
+    background-color: #f7f9fa;
+    transition: 0.5 ease-in;
+  }
+
+.closeBtn{
+    text-align:right;
+    margin-bottom: 50px;
+    padding: 5px;
+}
+
+.closeBtn:hover{
+    cursor: pointer;
+}
+
+.active{
+    display:block;
+}
+
+.modal{
+    display:none;
+}

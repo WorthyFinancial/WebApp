@@ -1,8 +1,11 @@
+import Expense from "@/pages/expense"
+
 export default function Home() {
   return (
   <h1 className="text-3xl font-bold underline">
-      Home Page b
+      Home Page b -
     </h1>
+
   )
 }
 
