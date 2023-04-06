@@ -2,15 +2,16 @@ import { Home } from "react-feather"
 import { Checkbox } from "@chakra-ui/react";
 import { create } from "zustand"
 import { goals } from "@/lib/goals";
-
 import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
+    Accordion,
+    AccordionItem,
+    AccordionButton,
+    AccordionPanel,
     AccordionIcon,
-  Box
-} from '@chakra-ui/react'
+    Box
+} from '@chakra-ui/react';
+
+import Layout from "@/components/layout";
 
 const useGoalsStore = create(set => ({
     selectedGoals: [],
@@ -20,7 +21,7 @@ const useGoalsStore = create(set => ({
 
 export default function GoalsPage() {
     return (
-        <div>
+        <>
             <h1>Goals</h1>
             <div className="flex gap-8">
                 <div className="w-7/12">
@@ -33,8 +34,16 @@ export default function GoalsPage() {
                 </div>   
             </div>
             
-        </div>
+        </>
     )
+}
+
+GoalsPage.getLayout = function getLayout(page) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
 }
 
 const GoalsDirectory = () => {

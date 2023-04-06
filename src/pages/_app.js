@@ -6,9 +6,12 @@ import '@/styles/user-details-form.css'
 import { ChakraProvider } from '@chakra-ui/react'
 
 export default function App({ Component, pageProps }) {
+   // Use the layout defined at the page level, if available
+  const getLayout = Component.getLayout || ((page) => page)
+  
   return (
     <ChakraProvider>
-      <Component {...pageProps} />
+      {getLayout(<Component {...pageProps} />)}
     </ChakraProvider>
   )
 }
