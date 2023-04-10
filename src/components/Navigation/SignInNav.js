@@ -1,12 +1,14 @@
-import React from "react";
+import Link from "next/link";
+
 
 const SignInNav = () => {
    return (
-     <nav style={ {display: 'flex', justifyContent:'flex-end'} }>
-        <p className="f3 link dim black underline pa3 pointer">Profile</p>
-        <p className="f3 link dim black underline pa3 pointer">Sign Out</p>
+     <nav className="flex gap-4">
+        <p className="text-2xl"><Link href="/">Profile</Link></p>
+        <p className="text-2xl"><Link href="/">Sign Out</Link></p>
     </nav>
    )
 }
+
 
 export default SignInNav;
