@@ -1,4 +1,5 @@
 import 'tachyons'
+// import 'flowbite';
 import '@/styles/globals.css'
 import '@/styles/signin-form.css'
 import '@/styles/user-details-form.css'

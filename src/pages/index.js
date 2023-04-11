@@ -1,11 +1,17 @@
-import Expense from "@/pages/expense"
+import DebtPlan from "@/components/debtPlan"
+import Layout from "@/components/layout"
+import Dashboard from "./dashboard"
+import debts from '../lib/debts';
 
-export default function Home() {
+const Home = () => {
+  console.log('debts = ', debts)
   return (
-  <h1 className="text-3xl font-bold underline">
-      Home Page b -
-    </h1>
-
+    <main>
+      <Layout />
+      <Dashboard />
+      <DebtPlan debts={[]}/>
+    </main>
   )
 }
 
+export default Home;
