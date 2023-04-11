@@ -4,7 +4,7 @@ import Dashboard from "@/features/dashboard/dashboard"
 import debts from '../lib/debts';
 
 const Home = () => {
-  console.log('debts = ', debts)
+  console.log("debts = ", debts);
   return (
       <>
         <Dashboard />
