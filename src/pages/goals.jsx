@@ -22,7 +22,7 @@ const useGoalsStore = create(set => ({
 export default function GoalsPage() {
     return (
         <>
-            <h1>Goals</h1>
+            <h1 className="text-xl font-semibold">Goals</h1>
             <div className="flex gap-8">
                 <div className="w-7/12">
                     <p>Step 1: Select goals that are important to you.</p>
