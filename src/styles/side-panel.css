@@ -17,11 +17,3 @@
 .closeBtn:hover{
     cursor: pointer;
 }
-
-.active{
-    display:block;
-}
-
-.modal{
-    display:none;
-}

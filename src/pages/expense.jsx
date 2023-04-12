@@ -69,21 +69,20 @@ const ExpenseCategory = ({category}) => {
 
 }
 
-const ExpenseSubcategory = (category) => {
+const ExpenseSubcategory = ( {category}) => {
     let expenseResults;
-    const { expenses} = useExpenseStore();
-    expenses.map(expense => console.log(expense.Item_Category))
 
+    const { expenses } = useExpenseStore();
     
     
-    expenseResults = expenses.filter(expense => {
-        return expense.Item_Category === category})
+    expenseResults = expenses.filter((expense) => {
+        return expense.Item_Category == category})
 
-    console.log(expenseResults);
+ 
 
     return (
         <>
-        {expenses.map(expense => 
+        {expenseResults.map(expense => 
             <ExpenseItem expense={expense} key={expense.id} />
         )}
         </>
@@ -121,7 +120,7 @@ const TransactionCard = () => {
              <Card key={expense.id} size="sm" >
                 <CardBody className="border card-font fw ">
                     <Box textAlign="right" display="flex" flexDirection="column" justifyContent="flex-end">
-                         <div className="select"> 
+                         <div> 
                           <select defaultValue="cost-type" > 
                                  <option name="Fixed"> Fixed</option>
                                  <option name="Variable">Variable</option>
