@@ -26,6 +26,7 @@ export default function Layout({ children }) {
                     <ActiveLink pathname={pathname} href="/">Dashboard</ActiveLink>
                     <ActiveLink pathname={pathname} href="/work-systems">Work Systems</ActiveLink>
                     <ActiveLink pathname={pathname} href='/goals'>Goals</ActiveLink>
+                    <ActiveLink pathname={pathname} href="/expense">Expense</ActiveLink>
                     <ActiveLink pathname={pathname} href='/chat'>Chat</ActiveLink>
                     <Divider colorScheme='blackAlpha' />
                     <ActiveLink pathname={pathname} href="/notifications">Notifications</ActiveLink>
