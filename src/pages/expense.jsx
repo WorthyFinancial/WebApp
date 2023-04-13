@@ -3,6 +3,7 @@ import { Card, CardBody } from "@chakra-ui/react";
 import PageTitle from "@/components/PageTitle";
 import transactions from "@/lib/transactions";
 import {create} from 'zustand';
+import Layout from "@/components/layout";
 
 
 const useExpenseStore = create((set) => ({
@@ -50,6 +51,13 @@ const expense = () => {
     )
 }
 
+expense.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            {page}
+        </Layout>
+    )
+}
 
 const ExpenseCategory = ({category}) => {
 
