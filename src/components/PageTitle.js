@@ -2,9 +2,7 @@ import { Heading } from "@chakra-ui/react";
 
 const PageTitle = ({title}) =>{
     return(
-        <Heading as="h2" fontWeight="600" fontSize="2.0rem" letterSpacing="-0.5px"> 
-        {title}
-        </Heading>
+        <h1 className="text-xl font-semibold">{title}</h1>
     )
 
 }

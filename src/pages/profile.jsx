@@ -1,9 +1,10 @@
 import Layout from "@/components/layout"
+import PageTitle from "@/components/PageTitle"
 
 const ProfilePage = () => {
   return (
       <>
-        <h1 className="text-xl font-semibold">Profile</h1>
+        <PageTitle title='Profile'/>
       </>
   )
 }

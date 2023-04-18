@@ -1,9 +1,10 @@
+import PageTitle from "@/components/PageTitle"
 import Layout from "@/components/layout"
 
 const ChatPage = () => {
   return (
       <>
-        <h1 className="text-xl font-semibold">Chat</h1>
+        <PageTitle title='Chat'/>
       </>
   )
 }
