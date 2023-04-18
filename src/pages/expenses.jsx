@@ -1,43 +1,23 @@
 import {Accordion, VStack, AccordionItem, AccordionIcon, AccordionButton, Box, AccordionPanel, Spacer } from "@chakra-ui/react";
 import { Card, CardBody } from "@chakra-ui/react";
 import PageTitle from "@/components/PageTitle";
-import transactions from "@/lib/transactions";
-import {create} from 'zustand';
+import { useExpenses } from "@/stores/expenses";
 import Layout from "@/components/layout";
 
-
-const useExpenseStore = create((set) => ({
-    expenses: transactions,
-    selectedExpense: [],
-    active:true,
-    setActiveState:() => set(state => ({active: !state.active})),
-    addExpense: (expense) => set(state=> ({selectedExpense: [...state.selectedExpense, expense]})),
-    removeExpense: () => set({selectedExpense:[]}),
-}))
-
-const expense = () => {
-    const { setActiveState, active } = useExpenseStore();
+const ExpensesPage = () => {
+    const { setActiveState, active } = useExpenses();
 
     return (
-        <div className="flex">
-            
+        <div className="flex gap-3"> 
             <div className="w-8/12">
-                <VStack spacing="6">
-
-                   <PageTitle title='Expense Categories' />
-
-                        <Box p={4} w="100%" className="">
+            <PageTitle title='Expense Categories' />
                             <Accordion allowMultiple className="border-rt border-lt"> 
-
                                   <ExpenseCategory category="Bills" />
                                   <ExpenseCategory category="Debt" />
                                   <ExpenseCategory category="Subscriptions" />
                                   <ExpenseCategory category="Investments" />
                                   <ExpenseCategory category="Other Expenses" />
-
                             </Accordion>
-                        </Box>
-                </VStack>
             </div>
             <div style={{display: active ? "none" : "block"}} className="w-4/12 bg-slate-50 h-screen">
                 <div className={`closeBtn`} onClick={setActiveState}>
@@ -45,13 +25,11 @@ const expense = () => {
                 </div>
                 <TransactionCard />
             </div>
-        
-  
         </div>
     )
 }
 
-expense.getLayout = function getLayout(page) {
+ExpensesPage.getLayout = function getLayout(page) {
     return (
         <Layout>
             {page}
@@ -60,7 +38,6 @@ expense.getLayout = function getLayout(page) {
 }
 
 const ExpenseCategory = ({category}) => {
-
     return(
         <AccordionItem>
             <h1>
@@ -73,21 +50,14 @@ const ExpenseCategory = ({category}) => {
             </h1>
             <ExpenseSubcategory category={category}/>
         </AccordionItem>
-    )
-
-}
+        )
+    }
 
 const ExpenseSubcategory = ( {category}) => {
     let expenseResults;
-
-    const { expenses } = useExpenseStore();
-    
-    
+    const { expenses } = useExpenses();
     expenseResults = expenses.filter((expense) => {
         return expense.Item_Category == category})
-
- 
-
     return (
         <>
         {expenseResults.map(expense => 
@@ -98,14 +68,11 @@ const ExpenseSubcategory = ( {category}) => {
 }
 
 const ExpenseItem =({expense})=>{
-    const { addExpense, removeExpense, setActiveState } = useExpenseStore();
-
+    const { addExpense, removeExpense, setActiveState } = useExpenses();
     const handleClickedExpense = (addExpense, removeExpense, expense) => {
         removeExpense();
         addExpense(expense);
     }
-
-    
     return(
         <div onClick={setActiveState}>
         <AccordionPanel  borderBottom="1px" borderColor='gray.200' pb={1} key={expense.id} onClick={() => handleClickedExpense(addExpense, removeExpense, expense)} display="flex" justifyContent="space-bewteen" >
@@ -118,9 +85,7 @@ const ExpenseItem =({expense})=>{
 }
 
 const TransactionCard = () => {
-
-    const {selectedExpense} = useExpenseStore();
-
+    const {selectedExpense} = useExpenses();
     return (
         <div >
            {selectedExpense.map((expense) => {
@@ -154,4 +119,4 @@ const TransactionCard = () => {
     )
 }
 
-export default expense;
+export default ExpensesPage;
