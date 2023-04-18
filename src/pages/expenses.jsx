@@ -10,7 +10,7 @@ const ExpensesPage = () => {
     return (
         <div className="flex gap-3"> 
             <div className="w-8/12">
-            <PageTitle title='Expense Categories' />
+            <PageTitle title='Expenses' />
                             <Accordion allowMultiple className="border-rt border-lt"> 
                                   <ExpenseCategory category="Bills" />
                                   <ExpenseCategory category="Debt" />

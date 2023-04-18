@@ -1,9 +1,10 @@
 import Layout from "@/components/layout"
+import PageTitle from "@/components/PageTitle"
 
 const  HelpPage = () => {
   return (
       <>
-        <h1 className="text-xl font-semibold">Help</h1>
+        <PageTitle title='Help'/>
       </>
   )
 }

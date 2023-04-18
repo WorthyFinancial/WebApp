@@ -1,9 +1,10 @@
 import Layout from "@/components/layout"
+import PageTitle from "@/components/PageTitle"
 
 const WorkSystemsPage = () => {
   return (
       <>
-        <h1 className="text-xl font-semibold">Work Systems</h1>
+        <PageTitle  title='Work Systems' />
       </>
   )
 }
