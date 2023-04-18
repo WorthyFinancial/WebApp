@@ -2,6 +2,7 @@ import { Home } from "react-feather"
 import { Checkbox } from "@chakra-ui/react";
 import { create } from "zustand"
 import { goals } from "@/lib/goals";
+import PageTitle from "@/components/PageTitle";
 import {
     Accordion,
     AccordionItem,
@@ -21,8 +22,8 @@ const useGoalsStore = create(set => ({
 
 export default function GoalsPage() {
     return (
-        <>
-            <h1 className="text-xl font-semibold">Goals</h1>
+        <>  
+            <PageTitle title='Goals' />
             <div className="flex gap-8">
                 <div className="w-7/12">
                     <p>Step 1: Select goals that are important to you.</p>
