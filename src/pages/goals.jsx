@@ -1,5 +1,6 @@
 import { Home } from "react-feather"
 import { Checkbox } from "@chakra-ui/react";
+import PageTitle from "@/components/PageTitle";
 import {
     Accordion,
     AccordionItem,
@@ -14,8 +15,8 @@ import { useGoals } from "@/stores/goals";
 
 export default function GoalsPage() {
     return (
-        <>
-            <h1 className="text-xl font-semibold">Goals</h1>
+        <>  
+            <PageTitle title='Goals' />
             <div className="flex gap-8">
                 <div className="w-7/12">
                     <p className="my-2">Step 1: Select goals that are important to you.</p>
