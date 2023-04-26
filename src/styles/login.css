@@ -1,0 +1,18 @@
+.login_banner,.register_input {
+    border: 1px solid #BAED08;
+}
+.login_banner:hover{
+    background-color: #D3E397;
+    color: white;
+}
+.register_input:focus{
+    outline: 1px solid #BAED08;
+}
+.submit_btn{
+    background-color: #D3E397;
+    color:white;
+}
+
+.submit_btn:hover{
+    opacity: 0.7;
+}
