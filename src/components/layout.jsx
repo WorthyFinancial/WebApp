@@ -33,6 +33,7 @@ export default function Layout({ children }) {
                     <ActiveLink pathname={pathname} href="/settings">Settings</ActiveLink>
                     <ActiveLink pathname={pathname} href="/help">Help</ActiveLink>
                     <ActiveLink pathname={pathname} href="/profile">Profile</ActiveLink>
+                    <ActiveLink pathname={pathname} href="/networth">NetWorth</ActiveLink>
                 </ul>
 
             </nav>
