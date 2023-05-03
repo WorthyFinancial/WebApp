@@ -1,4 +1,5 @@
 import Logo from "@/components/Logo";
+import Link from "next/link";
 
 
 const SigninPage = () => {
@@ -17,12 +18,14 @@ const SigninPage = () => {
                     <input className="register_input p-1" type="text" placeholder="Email" />
                     <input className="register_input p-1" type="text" placeholder="Password" />
                     <div className="flex justify-end">
-                        <button className="submit_btn py-2 px-3 rounded text-sm">Submit</button>
+                        <Link href="/email-login">      
+                            <button className="submit_btn py-2 px-3 rounded text-sm">Submit</button>
+                        </Link>
                     </div>
                 </form>
             </div>
            <div className="mt-10 ">
-                <span className="text-xs">Already have an account? Sign-in here</span>
+                <span className="text-xs">Already have an account? Sign-in <Link href="/email-login">here</Link></span>
            </div>
         </div>
     )

@@ -1,5 +1,5 @@
 import Logo from "@/components/Logo";
-
+import Link from "next/link";
 
 const SigninPage = () => {
     return (
@@ -11,16 +11,19 @@ const SigninPage = () => {
                 <span className="text-xl font-semibold"> Sign in to your Worthy Workspace</span>
                 <span className="text-sm">Using employer credentials</span>
             </div>
-            <div className="flex flex-col gap-4 hover: cursor-pointer">
+            <div className="flex flex-col gap-4 hover:cursor-pointer">
                 <span className="px-10 py-2 rounded-full login_banner">Sign in with SSO</span>
                 <span className="px-10 py-2 rounded-full login_banner">Sign in with company email</span>
                 <span className="px-10 py-2 rounded-full login_banner">Sign in with workspace URL</span>
             </div>
            <div className="mt-10 ">
-                <span className="text-xs">Not using Worthy with an employer?</span>
+                <Link href="/email-login">
+                    <span className="text-xs">Not using Worthy with an employer?</span>
+                </Link>
            </div>
         </div>
     )
 }
 
 export default SigninPage
+
