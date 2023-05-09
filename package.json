@@ -14,6 +14,8 @@
     "@chakra-ui/react": "^2.6.1",
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
+    "@tanstack/react-query": "^4.29.5",
+    "axios": "^1.4.0",
     "clsx": "^1.2.1",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
@@ -24,6 +26,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-feather": "^2.0.10",
+    "swr": "^2.1.5",
     "tachyons": "^4.12.0",
     "zustand": "^4.3.6"
   },
