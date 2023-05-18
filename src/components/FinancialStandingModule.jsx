@@ -36,7 +36,7 @@ const FinancialStandingModule = ({ fund_name, standing }) => {
             {/* // height is static, add min-width */}
             <div className="flex flex-col shadow-lg rounded bg-slate-100 m-5 p-5">
                 {fundData.map((fund) => (
-                    <div className="flex justify-between border-b mb-1">
+                    <div className="flex justify-between border-b mb-1" key={fund.name}>
                         <div className="font-medium">{fund.name}</div>
                         <div className="text-green-500">{fund.standing}</div>
                     </div>

@@ -1,5 +1,6 @@
 import Layout from "@/components/layout"
 import PageTitle from "@/components/PageTitle"
+import { withAuth } from "../HOC/protected"
 
 const  HelpPage = () => {
   return (
@@ -17,4 +18,4 @@ HelpPage.getLayout = function getLayout(page) {
   )
 }
 
-export default HelpPage;
+export default withAuth(HelpPage)

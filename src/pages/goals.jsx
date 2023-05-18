@@ -11,9 +11,10 @@ import {
 } from '@chakra-ui/react';
 import Layout from "@/components/layout";
 import { useGoals } from "@/stores/goals";
+import { withAuth } from "../HOC/protected";
 
 
-export default function GoalsPage() {
+ function GoalsPage() {
     return (
         <>  
             <PageTitle title='Goals' />
@@ -108,3 +109,6 @@ const SelectedGoalItem = ({ goal }) => {
         </AccordionItem>
     )
 }
+
+
+export default withAuth(GoalsPage)

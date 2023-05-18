@@ -1,5 +1,6 @@
 import Logo from "@/components/Logo";
 import { useSignUp } from "@/hooks/useAuth";
+import { useAuth } from "@/stores/auth";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -9,13 +10,19 @@ const SigninPage = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const mutation = useSignUp();
-  console.log("mutation", mutation.data);
   const onSubmit = (event) => {
     event.preventDefault();
     mutation.mutate({ firstName, lastName, email, password });
   };
 
-  //   test3@gmail.com
+  const user = useAuth((state) => state.user);
+  
+
+  useEffect(() => {
+    if (user && user.jwt) {
+      router.push('/');
+    }
+  }, [user]);
 
   return (
     <div className='h-screen flex flex-col items-center justify-center gap-8 text-center'>

@@ -1,5 +1,6 @@
 import React from "react";
 import Profile from "./Profile";
+import { withAuth } from "../HOC/protected";
 
 const UserDirectory = ({ users }) => {
   const userArray = users.map((user, i) => {
@@ -16,4 +17,4 @@ const UserDirectory = ({ users }) => {
   return <div>{userArray}</div>;
 };
 
-export default UserDirectory;
+export default withAuth(UserDirectory)
