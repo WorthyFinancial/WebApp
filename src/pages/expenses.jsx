@@ -3,6 +3,7 @@ import { Card, CardBody } from "@chakra-ui/react";
 import PageTitle from "@/components/PageTitle";
 import { useExpenses } from "@/stores/expenses";
 import Layout from "@/components/layout";
+import { withAuth } from "@/components/protected";
 
 const ExpensesPage = () => {
     const { setActiveState, active } = useExpenses();
@@ -119,4 +120,4 @@ const TransactionCard = () => {
     )
 }
 
-export default ExpensesPage;
+export default withAuth(ExpensesPage)

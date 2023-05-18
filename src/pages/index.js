@@ -1,10 +1,10 @@
-import DebtPlan from "@/components/debtPlan"
+import DebtPlan from "@/components/DebtPlan"
 import Layout from "@/components/layout"
+import { withAuth } from "@/components/protected"
 import Dashboard from "@/features/dashboard/dashboard"
-import debts from '../lib/debts';
+import { useAuth } from "@/stores/auth"
 
 const Home = () => {
-  console.log("debts = ", debts);
   return (
       <>
         <Dashboard />
@@ -21,4 +21,4 @@ Home.getLayout = function getLayout(page) {
   )
 }
 
-export default Home;
+export default withAuth(Home)

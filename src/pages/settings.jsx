@@ -1,5 +1,6 @@
 import Layout from "@/components/layout"
 import PageTitle from "@/components/PageTitle"
+import { withAuth } from "@/components/protected"
 
 const SettingsPage = () => {
   return (
@@ -17,4 +18,4 @@ SettingsPage.getLayout = function getLayout(page) {
   )
 }
 
-export default SettingsPage;
+export default withAuth(SettingsPage)

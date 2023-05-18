@@ -9,6 +9,10 @@ export const useAuth = create(
         set(() => ({
           user: user,
         })),
+        logout : () => {
+          set(() => ({user : null}))
+          localStorage.removeItem("auth");
+        } 
     }),
     {
       name: "auth",

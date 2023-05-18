@@ -1,6 +1,7 @@
 import Layout from "@/components/layout";
 import debts from "../lib/debts"; 
 import assets from "../lib/assets";
+import { withAuth } from "@/components/protected";
 
 const NetWorthCalculator = () => {
 
@@ -124,4 +125,4 @@ NetWorthCalculator.getLayout = function getLayout(page) {
     </Layout>
   )
 }
-export default NetWorthCalculator;
+export default withAuth(NetWorthCalculator)

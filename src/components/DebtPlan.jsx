@@ -12,7 +12,6 @@ const DebtPlan = ( {debts} ) => {
             />
         ) 
     });
-    console.log("debt Array", debtArray);
     return (
         debtArray
     )

@@ -1,5 +1,6 @@
 import PageTitle from "@/components/PageTitle"
 import Layout from "@/components/layout"
+import { withAuth } from "@/components/protected"
 
 const ChatPage = () => {
   return (
@@ -17,4 +18,4 @@ ChatPage.getLayout = function getLayout(page) {
   )
 }
 
-export default ChatPage;
+export default withAuth(ChatPage)
