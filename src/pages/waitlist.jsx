@@ -3,7 +3,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import { useState } from "react";
 import { useAddToWaitlist } from "@/hooks/useWaitlist";
-import { withAuth } from "@/components/protected";
+import { withAuth } from "../HOC/protected";
 
 const Headline = styled.h1`
   font-weight: bold;

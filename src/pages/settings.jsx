@@ -1,6 +1,6 @@
 import Layout from "@/components/layout"
 import PageTitle from "@/components/PageTitle"
-import { withAuth } from "@/components/protected"
+import { withAuth } from "../HOC/protected"
 
 const SettingsPage = () => {
   return (

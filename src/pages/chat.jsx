@@ -1,6 +1,6 @@
 import PageTitle from "@/components/PageTitle"
 import Layout from "@/components/layout"
-import { withAuth } from "@/components/protected"
+import { withAuth } from "../HOC/protected"
 
 const ChatPage = () => {
   return (

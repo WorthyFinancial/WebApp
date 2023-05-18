@@ -1,6 +1,6 @@
 import React from "react";
 import Profile from "./Profile";
-import { withAuth } from "./protected";
+import { withAuth } from "../HOC/protected";
 
 const UserDirectory = ({ users }) => {
   const userArray = users.map((user, i) => {

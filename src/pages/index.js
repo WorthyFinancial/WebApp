@@ -1,6 +1,6 @@
 import DebtPlan from "@/components/DebtPlan"
 import Layout from "@/components/layout"
-import { withAuth } from "@/components/protected"
+import { withAuth } from "../HOC/protected"
 import Dashboard from "@/features/dashboard/dashboard"
 import { useAuth } from "@/stores/auth"
 

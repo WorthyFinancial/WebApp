@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import Layout from "@/components/layout";
 import { useGoals } from "@/stores/goals";
-import { withAuth } from "@/components/protected";
+import { withAuth } from "../HOC/protected";
 
 
  function GoalsPage() {

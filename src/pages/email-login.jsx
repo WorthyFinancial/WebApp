@@ -3,7 +3,7 @@ import { useSignIn } from "@/hooks/useAuth";
 import { useAuth } from "@/stores/auth";
 import { useEffect,useState } from "react";
 import { useRouter } from "next/router";
-import { withAuth } from "@/components/protected";
+import { withAuth } from "../HOC/protected";
 
 
 const SigninPage = () => {

@@ -1,7 +1,7 @@
 import Layout from "@/components/layout";
 import debts from "../lib/debts"; 
 import assets from "../lib/assets";
-import { withAuth } from "@/components/protected";
+import { withAuth } from "../HOC/protected";
 
 const NetWorthCalculator = () => {
 
